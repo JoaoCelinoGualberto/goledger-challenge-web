@@ -4,14 +4,15 @@ import ArtistPage from "./pages/ArtistPage.tsx";
 import AlbumPage from "./pages/AlbumPage.tsx";
 import SongPage from "./pages/SongPage.tsx";
 import PlaylistPage from "./pages/PlaylistPage.tsx";
-import "./App.css"; 
+import "./App.css";
+import Footer from "./pages/Footer/Footer.tsx";
 
 function App() {
   return (
     <Router>
-      <div className="home">
+      <div className="home cloud-pulse-background">
         <header className="home-header">
-          <h1>Welcome to the Music App</h1>
+          <h1>Welcome to the GoLedger Music App</h1>
           <p>Explore your favorite Artists, Albums, Songs, and Playlists!</p>
         </header>
         <nav className="home-links">
@@ -27,6 +28,7 @@ function App() {
         <Route path="/songs" element={<SongPage />} />
         <Route path="/playlists" element={<PlaylistPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
